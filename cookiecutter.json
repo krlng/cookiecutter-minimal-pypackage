@@ -1,0 +1,9 @@
+{
+    "author_name": "Nico Kreiling",
+    "author_email": "nico.kreiling@gmail.com",
+
+    "package_name": "",
+    "package_version": "0.1.0",
+    "package_description": "An opinionated, minimal cookiecutter template for Python packages",
+    "package_url": "https://github.com/krlng/cookiecutter-minimal-pypackage"
+}
