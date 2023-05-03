@@ -1,0 +1,27 @@
+exclude: '.git|.tox'
+default_stages: [commit]
+fail_fast: false
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-added-large-files
+      - id: trailing-whitespace
+        exclude: ^notebooks/.*$|^mlruns/.*$
+      - id: end-of-file-fixer
+        exclude: ^notebooks/.*$|^mlruns/.*$
+      - id: check-toml
+      - id: check-merge-conflict
+      - id: check-yaml
+        args:
+        -   --unsafe
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.0.264
+    hooks:
+    - id: ruff
+      exclude: ^notebooks/.*$|^mlruns/.*$
+      args: ['--fix', '--line-length=120']
+ci:
+    autofix_commit_msg: 🎨 [pre-commit.ci] Auto format from pre-commit.com hooks
+    autoupdate_commit_msg: ⬆ [pre-commit.ci] pre-commit autoupdate
