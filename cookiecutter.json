@@ -6,5 +6,5 @@
 
     "author_name": "Nico Kreiling",
     "author_email": "nico.kreiling@gmail.com",
-    "package_url": "https://github.com/krlng/{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}"
+    "package_url": "https://github.com/krlng/{{ cookiecutter.package_name.lower().replace(' ', '_').replace('-', '_') }}"
 }
